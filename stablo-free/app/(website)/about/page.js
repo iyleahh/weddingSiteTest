@@ -1,10 +1,6 @@
-import { getAllAuthors, getSettings } from "@/lib/sanity/client";
 import About from "./about";
+import { siteConfig, sampleAuthors } from "@/lib/config";
 
-export default async function AboutPage() {
-  const authors = await getAllAuthors();
-  const settings = await getSettings();
-  return <About settings={settings} authors={authors} />;
+export default function AboutPage() {
+  return <About settings={siteConfig} authors={sampleAuthors} />;
 }
-
-// export const revalidate = 60;

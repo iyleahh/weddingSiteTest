@@ -1,5 +1,4 @@
 import Container from "@/components/container";
-import { urlForImage } from "@/lib/sanity/image";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -15,12 +14,12 @@ export default function About({ authors, settings }) {
 
       <div className="mb-16 mt-6 grid grid-cols-3 gap-5 md:mb-32 md:mt-16 md:gap-16">
         {authors.slice(0, 3).map(author => {
-          const imageProps = urlForImage(author?.image) || null;
+          const imageProps = author?.image?.src ? { src: author.image.src } : null;
           return (
             <div
               key={author._id}
               className="relative aspect-square overflow-hidden rounded-md bg-slate-50 odd:translate-y-10 odd:md:translate-y-16">
-              <Link href={`/author/${author?.slug}`}>
+              <Link href={`/author/${author?.slug?.current || ''}`}>
                 {imageProps && (
                   <Image
                     src={imageProps?.src}

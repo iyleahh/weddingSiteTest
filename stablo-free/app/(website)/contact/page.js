@@ -1,9 +1,6 @@
-import { getSettings } from "@/lib/sanity/client";
 import Contact from "./contact";
+import { siteConfig } from "@/lib/config";
 
-export default async function ContactPage() {
-  const settings = await getSettings();
-  return <Contact settings={settings} />;
+export default function ContactPage() {
+  return <Contact settings={siteConfig} />;
 }
-
-// export const revalidate = 60;

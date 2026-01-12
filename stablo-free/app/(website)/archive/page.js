@@ -1,13 +1,8 @@
-import { Suspense } from "react";
 import Container from "@/components/container";
-import Archive from "./archive";
-import Loading from "@/components/loading";
+import PostList from "@/components/postlist";
+import { samplePosts } from "@/lib/config";
 
-export const dynamic = "force-dynamic";
-
-export const runtime = "edge";
-
-export default async function ArchivePage({ searchParams }) {
+export default function ArchivePage() {
   return (
     <>
       <Container className="relative">
@@ -19,14 +14,12 @@ export default async function ArchivePage({ searchParams }) {
             See all posts we have ever written.
           </p>
         </div>
-        <Suspense
-          key={searchParams.page || "1"}
-          fallback={<Loading />}>
-          <Archive searchParams={searchParams} />
-        </Suspense>
+        <div className="mt-10 grid gap-10 md:grid-cols-2 lg:gap-10 xl:grid-cols-3">
+          {samplePosts.map(post => (
+            <PostList key={post._id} post={post} aspect="square" />
+          ))}
+        </div>
       </Container>
     </>
   );
 }
-
-// export const revalidate = 60;

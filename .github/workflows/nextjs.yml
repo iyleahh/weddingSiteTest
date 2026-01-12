@@ -31,14 +31,8 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Enable corepack and pnpm
-        run: |
-          corepack enable
-          corepack prepare pnpm@latest --activate
-        working-directory: .
-
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: npm install
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -49,12 +43,12 @@ jobs:
         uses: actions/cache@v4
         with:
           path: stablo-free/.next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('stablo-free/pnpm-lock.yaml') }}-${{ hashFiles('stablo-free/**.[jt]s', 'stablo-free/**.[jt]sx') }}
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('stablo-free/package-lock.json') }}-${{ hashFiles('stablo-free/**.[jt]s', 'stablo-free/**.[jt]sx') }}
           restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('stablo-free/pnpm-lock.yaml') }}-
+            ${{ runner.os }}-nextjs-${{ hashFiles('stablo-free/package-lock.json') }}-
 
       - name: Build with Next.js
-        run: pnpm exec next build
+        run: npm run build
 
       - name: Copy CNAME for custom domain
         run: |
