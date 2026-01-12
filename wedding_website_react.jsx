@@ -1,21 +1,40 @@
-import React, { useEffect, useMemo, useState } from "react";
-import {
-  BrowserRouter,
+const { useEffect, useMemo, useState } = React;
+const {
+  HashRouter,
   Routes,
   Route,
   NavLink,
   Navigate,
   useLocation,
-} from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-  CalendarDays,
-  Plane,
-  MailQuestion,
-  Sparkles,
-  MapPin,
-  Heart,
-} from "lucide-react";
+} = ReactRouterDOM;
+
+const framerMotion =
+  window.framerMotion || window.FramerMotion || window["framer-motion"] || {};
+const motion = framerMotion.motion || { div: (props) => <div {...props} /> };
+const AnimatePresence =
+  framerMotion.AnimatePresence || (({ children }) => <>{children}</>);
+
+const lucide = window.lucideReact || window.LucideReact || {};
+
+const fallbackIcon = (symbol) =>
+  function Icon({ className = "", ...props }) {
+    return (
+      <span
+        className={`inline-flex items-center justify-center ${className}`}
+        aria-hidden="true"
+        {...props}
+      >
+        {symbol}
+      </span>
+    );
+  };
+
+const CalendarDays = lucide.CalendarDays || fallbackIcon("📅");
+const Plane = lucide.Plane || fallbackIcon("✈️");
+const MailQuestion = lucide.MailQuestion || fallbackIcon("✉️");
+const Sparkles = lucide.Sparkles || fallbackIcon("✨");
+const MapPin = lucide.MapPin || fallbackIcon("📍");
+const Heart = lucide.Heart || fallbackIcon("♥️");
 
 // =============================
 // Update these two fields only
@@ -100,9 +119,9 @@ function format2(n) {
 // =============================
 // App Shell
 // =============================
-export default function App() {
+function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className={`min-h-screen ${theme.bg} ${theme.ink} antialiased`}>
         <SiteBackground />
         <Header />
@@ -113,7 +132,7 @@ export default function App() {
 
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
@@ -716,3 +735,6 @@ function MiniFeature({ title, text }) {
     </div>
   );
 }
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
