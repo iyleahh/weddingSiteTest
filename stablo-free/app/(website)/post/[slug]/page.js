@@ -2,8 +2,13 @@ import PostPage from "./default";
 
 import { getAllPostsSlugs, getPostBySlug } from "@/lib/sanity/client";
 
+// Required for static export - no fallback pages
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
-  return await getAllPostsSlugs();
+  const slugs = await getAllPostsSlugs();
+  // Return empty array if no posts (Sanity not configured)
+  return slugs || [];
 }
 
 export async function generateMetadata({ params }) {
