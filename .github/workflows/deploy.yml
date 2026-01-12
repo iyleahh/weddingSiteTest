@@ -1,0 +1,53 @@
+name: Build and deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Enable corepack and pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@latest --activate
+
+      - name: Install dependencies (pnpm)
+        run: pnpm install --frozen-lockfile
+        working-directory: stablo-free
+
+      - name: Build Next.js site
+        run: pnpm exec next build
+        working-directory: stablo-free
+
+      - name: Export static HTML
+        run: pnpm exec next export -o out
+        working-directory: stablo-free
+
+      - name: Copy CNAME for custom domain
+        run: |
+          if [ -f ../CNAME ]; then cp ../CNAME out/CNAME; fi
+        working-directory: stablo-free
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: stablo-free/out
+          keep_files: true

@@ -74,6 +74,27 @@ export const LOCATION_LINE = "Location TBD";
 
 If you have a `CNAME` file pointing to a custom domain (like `iyleah.com`), the deploy will work directly to that domain.
 
+### Using the included template and GitHub Actions
+
+- **Build source location:** This repository includes a Next.js template at `stablo-free` (moved to repo root).
+- **Automatic deploy:** A GitHub Actions workflow has been added at `.github/workflows/deploy.yml`. It will:
+   - install dependencies with `pnpm` inside the `stablo-free` folder,
+   - run `next build` and `next export` to produce a static `out` folder,
+   - copy the repository `CNAME` (if present) into the exported site,
+   - push the `out` content to the `gh-pages` branch for GitHub Pages.
+
+To use this workflow:
+
+1. Ensure the repository's default branch is `main` (or adjust the workflow triggers).
+2. Make sure the `CNAME` file in the repo root contains `iyleah.com` (it already exists in this repo).
+3. Push to `main` to trigger the workflow, or run it manually from the Actions tab.
+4. In the GitHub repository settings → Pages, set the source to the `gh-pages` branch (root).
+
+Notes and alternatives:
+- The template has been moved to the repository root at `stablo-free`.
+- GitHub Pages hosts static sites only. If you want full Next.js dynamic features, consider deploying to Vercel.
+
+
 ## Adding Content
 
 - **Travel Page**: Edit [`src/pages/HomePage.jsx`](src/pages/HomePage.jsx) and create a new `TravelPage.jsx` component
