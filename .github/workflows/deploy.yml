@@ -36,10 +36,6 @@ jobs:
         run: pnpm exec next build
         working-directory: stablo-free
 
-      - name: Export static HTML
-        run: pnpm exec next export -o out
-        working-directory: stablo-free
-
       - name: Copy CNAME for custom domain
         run: |
           if [ -f ../CNAME ]; then cp ../CNAME out/CNAME; fi
