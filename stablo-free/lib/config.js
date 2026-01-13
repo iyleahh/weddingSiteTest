@@ -1,13 +1,13 @@
 // Static site configuration - replace Sanity CMS
 export const siteConfig = {
-  title: "Iyleah & Partner",
-  description: "A minimal blog template built with Next.js and Tailwind CSS",
+  title: "Iyleah & Anusha",
+  description: "A wedding website built for my love with Next.js and Tailwind CSS",
   url: "https://iyleah.com",
-  copyright: "Iyleah & Partner",
+  copyright: "Iyleah & Anusha",
   logo: "/img/monogram_logo.svg",
   logoalt: "/img/monogram_logo.svg",
-  email: "hello@example.com",
-  phone: "",
+  email: "iyleahh@gmail.com",
+  phone: "708-949-2104",
   social: [],
   openGraphImage: "/img/opengraph.jpg"
 };
