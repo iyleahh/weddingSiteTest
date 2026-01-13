@@ -28,7 +28,7 @@ export default function Navbar(props) {
     },
     {
       label: "RSVP",
-      href: "https://stablo-pro.web3templates.com/",
+      href: "https://forms.office.com/r/NsRfCGhRR5",
       external: true,
       badge: "new"
     }
