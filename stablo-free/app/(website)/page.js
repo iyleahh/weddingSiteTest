@@ -1,6 +1,5 @@
-import HomePage from "./home";
-import { samplePosts } from "@/lib/config";
+import { redirect } from "next/navigation";
 
-export default function IndexPage() {
-  return <HomePage posts={samplePosts} />;
+export default function RootPage() {
+  redirect("/anusha");
 }
