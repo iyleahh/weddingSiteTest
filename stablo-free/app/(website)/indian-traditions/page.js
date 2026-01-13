@@ -43,7 +43,7 @@ export default function IndianTraditionsPage() {
                 Mehndi
               </h3>
               <p>
-                The Mehndi celebration is where intricate henna designs are applied to the bride's hands and feet. 
+                The Mehndi celebration is where intricate henna designs are applied to the bride&apos;s hands and feet. 
                 This joyful ceremony brings together family and friends for music, dancing, and celebrations.
               </p>
             </div>

@@ -33,7 +33,7 @@ export default function MexicanTraditionsPage() {
                 La Pedida
               </h3>
               <p>
-                The "asking" ceremony where the groom and his family formally ask for the bride's hand in marriage. 
+                The &ldquo;asking&rdquo; ceremony where the groom and his family formally ask for the bride&apos;s hand in marriage. 
                 This tradition emphasizes respect and family involvement in the union.
               </p>
             </div>
@@ -64,7 +64,7 @@ export default function MexicanTraditionsPage() {
               </h3>
               <p>
                 Mexican receptions are filled with music, dancing, and festive celebrations that often last long into the night. 
-                The couple's first dance is a special moment shared with family and friends.
+                The couple&apos;s first dance is a special moment shared with family and friends.
               </p>
             </div>
           </div>

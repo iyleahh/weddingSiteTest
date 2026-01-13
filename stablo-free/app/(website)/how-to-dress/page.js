@@ -19,7 +19,7 @@ export default function HowToDressPage() {
           </h2>
           <p>
             Looking your best at a wedding celebration is about comfort, respect, and celebrating with the couple. 
-            Whether you're attending a ceremony honoring Indian traditions, Mexican customs, or a fusion celebration, 
+            Whether you&apos;re attending a ceremony honoring Indian traditions, Mexican customs, or a fusion celebration, 
             this guide will help you choose the perfect outfit.
           </p>
         </section>
@@ -31,19 +31,19 @@ export default function HowToDressPage() {
           <div className="space-y-4">
             <div>
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">
-                Women's Attire
+                Women&apos;s Attire
               </h3>
               <p>
                 Consider wearing a traditional saree, salwar kameez, or lehenga if you have them. 
                 These garments are not only beautiful but show respect for the traditions being celebrated. 
-                Colorful fabrics in jewel tones, gold, or vibrant patterns are perfect. Don't forget complementary jewelry 
-                like bangles, necklaces, or bindis if you're comfortable wearing them.
+                Colorful fabrics in jewel tones, gold, or vibrant patterns are perfect. Don&apos;t forget complementary jewelry 
+                like bangles, necklaces, or bindis if you&apos;re comfortable wearing them.
               </p>
             </div>
 
             <div>
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">
-                Men's Attire
+                Men&apos;s Attire
               </h3>
               <p>
                 A traditional kurta with a dhoti or formal pants creates an elegant look. Alternatively, 
@@ -58,7 +58,7 @@ export default function HowToDressPage() {
               </h3>
               <p>
                 Statement jewelry is encouraged! Bangles, earrings, necklaces, and rings all add to the festive spirit. 
-                Henna is also a wonderful addition if you'd like to participate in the celebration.
+                Henna is also a wonderful addition if you&apos;d like to participate in the celebration.
               </p>
             </div>
           </div>
@@ -71,7 +71,7 @@ export default function HowToDressPage() {
           <div className="space-y-4">
             <div>
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">
-                Women's Attire
+                Women&apos;s Attire
               </h3>
               <p>
                 A beautiful dress in vibrant colors is perfect for a Mexican celebration. Consider dresses with embroidered details, 
@@ -82,11 +82,11 @@ export default function HowToDressPage() {
 
             <div>
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">
-                Men's Attire
+                Men&apos;s Attire
               </h3>
               <p>
                 A well-fitted suit or dressy pants with a guayabera shirt (traditional Mexican shirt) is an excellent choice. 
-                You could also opt for a traditional charro suit if you have one. Keep colors classic but don't be afraid 
+                You could also opt for a traditional charro suit if you have one. Keep colors classic but don&apos;t be afraid 
                 to add a touch of personality with your accessories.
               </p>
             </div>
@@ -97,7 +97,7 @@ export default function HowToDressPage() {
               </h3>
               <p>
                 Fresh flowers worn in your hair or as a boutonniere add a festive touch. Colorful scarves, shawls, or rebozos 
-                are both practical and beautifully cultural. Don't hesitate to wear bold jewelry or accessories!
+                are both practical and beautifully cultural. Don&apos;t hesitate to wear bold jewelry or accessories!
               </p>
             </div>
           </div>
@@ -110,11 +110,11 @@ export default function HowToDressPage() {
           <ul className="space-y-3 text-lg">
             <li className="flex gap-3">
               <span className="text-blue-600 dark:text-blue-400 font-bold">✓</span>
-              <span><strong>Comfort First:</strong> You'll be celebrating for hours, so wear something you feel comfortable moving around in.</span>
+              <span><strong>Comfort First:</strong> You&apos;ll be celebrating for hours, so wear something you feel comfortable moving around in.</span>
             </li>
             <li className="flex gap-3">
               <span className="text-blue-600 dark:text-blue-400 font-bold">✓</span>
-              <span><strong>Appropriate Footwear:</strong> Choose shoes suitable for both the ceremony and dancing—you may be removing them during certain parts of the celebration.</span>
+              <span><strong>Appropriate Footwear:</strong> Choose shoes suitable for both the ceremony and dancing&mdash;you may be removing them during certain parts of the celebration.</span>
             </li>
             <li className="flex gap-3">
               <span className="text-blue-600 dark:text-blue-400 font-bold">✓</span>
@@ -140,7 +140,7 @@ export default function HowToDressPage() {
             When in Doubt
           </h2>
           <p>
-            If you're unsure about what to wear, don't hesitate to reach out! We're happy to provide more specific guidance 
+            If you&apos;re unsure about what to wear, don&apos;t hesitate to reach out! We&apos;re happy to provide more specific guidance 
             about particular events or ceremonies. The most important thing is that you feel confident and comfortable celebrating with us.
           </p>
         </section>
