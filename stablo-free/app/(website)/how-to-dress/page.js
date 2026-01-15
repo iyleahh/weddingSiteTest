@@ -10,7 +10,7 @@ export default function HowToDressPage() {
     <ArticleLayout
       title="How To Dress"
       excerpt="Get inspired by our dress guide and styling tips for the celebration."
-      image="/img/traditions/dress.jpg"
+      image="/img/traditions/dress.png"
     >
       <div className="space-y-6">
         <section>
