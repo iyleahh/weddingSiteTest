@@ -16,7 +16,7 @@ export default function CountdownHeader() {
     setMounted(true);
 
     // Set target date - customize this to your wedding date
-    const targetDate = new Date("2025-06-15T00:00:00").getTime();
+    const targetDate = new Date("2026-01-26T09:00:00").getTime();
 
     const calculateTimeLeft = () => {
       const now = new Date().getTime();
@@ -55,7 +55,7 @@ export default function CountdownHeader() {
       {/* Content */}
       <Container className="relative h-full flex flex-col items-center justify-center">
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 text-center">
-          Counting Down to Our Big Day
+            Landing in Lima in...
         </h1>
 
         {/* Countdown Timer */}
