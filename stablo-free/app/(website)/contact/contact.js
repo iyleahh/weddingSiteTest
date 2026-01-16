@@ -7,12 +7,6 @@ import {
 } from "@heroicons/react/24/outline";
 
 export default function Contact({ settings }) {
-  const handleEmailClick = (e) => {
-    const subject = encodeURIComponent("Contact from Wedding Website");
-    const body = encodeURIComponent("Hi Iyleah & Anusha,\n\n");
-    window.location.href = `mailto:${settings?.email}?subject=${subject}&body=${body}`;
-  };
-
   return (
     <Container>
       <h1 className="mt-2 mb-3 text-3xl font-semibold tracking-tight text-center lg:leading-snug text-brand-primary lg:text-4xl dark:text-white">
@@ -28,7 +22,7 @@ export default function Contact({ settings }) {
             Get In Touch
           </h2>
           <p className="max-w-sm mt-5">
-            Have questions about our wedding? We'd love to hear from you!
+            Have questions about our wedding? We&apos;d love to hear from you!
             Feel free to reach out via email or phone.
           </p>
 
@@ -51,11 +45,11 @@ export default function Contact({ settings }) {
         </div>
         <div className="my-10">
           <div className="space-y-4">
-            <button
-              onClick={handleEmailClick}
-              className="w-full py-4 font-semibold text-white transition-colors bg-gray-900 rounded-md hover:bg-gray-800 focus:outline-none focus:ring-offset-2 focus:ring focus:ring-gray-200 px-7 dark:bg-white dark:text-black">
+            <a
+              href="mailto:iyleahh@gmail.com?subject=Contact%20from%20Wedding%20Website"
+              className="inline-block w-full py-4 font-semibold text-white transition-colors bg-gray-900 rounded-md hover:bg-gray-800 focus:outline-none focus:ring-offset-2 focus:ring focus:ring-gray-200 px-7 dark:bg-white dark:text-black text-center">
               Send us an Email
-            </button>
+            </a>
             <p className="text-sm text-center text-gray-600 dark:text-gray-400">
               Click the button above to open your email client and send us a message.
             </p>
