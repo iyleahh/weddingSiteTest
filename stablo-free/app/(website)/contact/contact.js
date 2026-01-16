@@ -13,7 +13,7 @@ export default function Contact({ settings }) {
         Contact
       </h1>
       <div className="text-center">
-        <p className="text-lg">We are here to help.</p>
+        <p className="text-lg">Get in touch with us about the wedding!</p>
       </div>
 
       <div className="grid my-10 md:grid-cols-2">
@@ -23,7 +23,7 @@ export default function Contact({ settings }) {
           </h2>
           <p className="max-w-sm mt-5">
             Have questions about our wedding? We&apos;d love to hear from you!
-            Feel free to reach out via email or phone.
+            Feel free to reach out via email or phone. If this is Abner, please add this number to WhatsApp!!
           </p>
 
           <div className="mt-5">
