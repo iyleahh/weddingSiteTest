@@ -16,7 +16,7 @@ export default function CountdownHeader() {
     setMounted(true);
 
     // Set target date - customize this to your wedding date
-    const targetDate = new Date("2026-01-26T09:00:00").getTime();
+    const targetDate = new Date("2027-01-26T09:00:00").getTime();
 
     const calculateTimeLeft = () => {
       const now = new Date().getTime();
