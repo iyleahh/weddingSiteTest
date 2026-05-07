@@ -4,319 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Our Wedding in Peru</title>
-  <style>
-    :root {
-      --bg: #fbf7f0;
-      --paper: #fffdf8;
-      --ink: #2f2a24;
-      --muted: #7b7066;
-      --line: #e8ded1;
-      --accent: #9b6f52;
-      --accent-soft: #ead8c8;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      background: var(--bg);
-      color: var(--ink);
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .site-wrapper {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 28px 24px 64px;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      padding: 18px 0 42px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .logo {
-      font-family: Georgia, 'Times New Roman', serif;
-      font-size: 1.35rem;
-      letter-spacing: 0.05em;
-    }
-
-    nav {
-      display: flex;
-      gap: 26px;
-      color: var(--muted);
-      font-size: 0.9rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-
-    nav a:hover {
-      color: var(--accent);
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 56px;
-      align-items: center;
-      padding: 86px 0 72px;
-    }
-
-    .eyebrow {
-      color: var(--accent);
-      font-size: 0.85rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      margin-bottom: 18px;
-    }
-
-    h1 {
-      font-family: Georgia, 'Times New Roman', serif;
-      font-size: clamp(3.2rem, 8vw, 6.8rem);
-      line-height: 0.95;
-      font-weight: 400;
-      letter-spacing: -0.05em;
-      max-width: 740px;
-    }
-
-    .hero-copy {
-      max-width: 560px;
-      margin-top: 26px;
-      color: var(--muted);
-      font-size: 1.06rem;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-top: 34px;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 44px;
-      padding: 0 20px;
-      border: 1px solid var(--accent);
-      border-radius: 999px;
-      color: var(--accent);
-      font-size: 0.9rem;
-      letter-spacing: 0.04em;
-    }
-
-    .button.primary {
-      background: var(--accent);
-      color: white;
-    }
-
-    .hero-card {
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      padding: 28px;
-      box-shadow: 0 24px 80px rgba(70, 51, 36, 0.08);
-    }
-
-    .hero-card-image {
-      min-height: 360px;
-      border-radius: 22px;
-      background:
-        linear-gradient(rgba(251, 247, 240, 0.15), rgba(251, 247, 240, 0.15)),
-        url('https://images.unsplash.com/photo-1587595431973-160d0d94add1?auto=format&fit=crop&w=900&q=80');
-      background-size: cover;
-      background-position: center;
-      margin-bottom: 22px;
-    }
-
-    .hero-card p {
-      color: var(--muted);
-      font-size: 0.96rem;
-    }
-
-    .section-heading {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 44px 0 24px;
-      border-top: 1px solid var(--line);
-    }
-
-    .section-heading h2 {
-      font-family: Georgia, 'Times New Roman', serif;
-      font-size: clamp(2rem, 4vw, 3.3rem);
-      font-weight: 400;
-      letter-spacing: -0.04em;
-    }
-
-    .section-heading p {
-      max-width: 420px;
-      color: var(--muted);
-      font-size: 0.98rem;
-    }
-
-    .article-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .article-card {
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      overflow: hidden;
-      transition: transform 180ms ease, box-shadow 180ms ease;
-    }
-
-    .article-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 18px 50px rgba(70, 51, 36, 0.08);
-    }
-
-    .article-image {
-      height: 220px;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .article-body {
-      padding: 24px;
-    }
-
-    .article-meta {
-      display: flex;
-      justify-content: space-between;
-      gap: 14px;
-      color: var(--accent);
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-
-    .article-card h3 {
-      font-family: Georgia, 'Times New Roman', serif;
-      font-size: 1.65rem;
-      font-weight: 400;
-      line-height: 1.15;
-      letter-spacing: -0.03em;
-      margin-bottom: 14px;
-    }
-
-    .article-card p {
-      color: var(--muted);
-      font-size: 0.96rem;
-      margin-bottom: 20px;
-    }
-
-    .read-more {
-      color: var(--accent);
-      font-size: 0.88rem;
-      letter-spacing: 0.05em;
-    }
-
-    .wide-card {
-      grid-column: span 2;
-    }
-
-    .rsvp-strip {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 24px;
-      align-items: center;
-      background: var(--accent-soft);
-      border-radius: 28px;
-      padding: 32px;
-      margin-top: 42px;
-    }
-
-    .rsvp-strip h2 {
-      font-family: Georgia, 'Times New Roman', serif;
-      font-size: 2rem;
-      font-weight: 400;
-      letter-spacing: -0.03em;
-    }
-
-    .rsvp-strip p {
-      color: var(--muted);
-      margin-top: 6px;
-    }
-
-    footer {
-      color: var(--muted);
-      text-align: center;
-      padding-top: 52px;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 900px) {
-      header {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      nav {
-        flex-wrap: wrap;
-        gap: 16px;
-      }
-
-      .hero {
-        grid-template-columns: 1fr;
-        padding-top: 58px;
-      }
-
-      .article-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .wide-card {
-        grid-column: span 1;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .site-wrapper {
-        padding: 20px 16px 48px;
-      }
-
-      nav {
-        font-size: 0.8rem;
-      }
-
-      .hero-card-image {
-        min-height: 270px;
-      }
-
-      .section-heading {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .article-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .rsvp-strip {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <div class="site-wrapper">
@@ -324,40 +12,42 @@
       <a class="logo" href="index.html">I & A</a>
       <nav aria-label="Main navigation">
         <a href="index.html">Home</a>
-        <a href="articles.html">Articles</a>
-        <a href="rsvp.html">RSVP</a>
-        <a href="travel.html">Travel</a>
+        <a href="https://forms.office.com/r/rdTySD0hh8">RSVP</a>
         <a href="schedule.html">Schedule</a>
+        <a href="travel.html">Travel</a>
+        <a href="visa.html">Visa</a>
+        <a href="https://registry.theknot.com/-january-2027-va/78106764">Registry</a>
+        <a href="articles.html">Articles</a>
       </nav>
     </header>
 
-    <main id="home">
+    <main>
       <section class="hero">
         <div>
           <p class="eyebrow">Destination Wedding · Peru</p>
-          <h1>Join us for a wedding in Peru.</h1>
+          <h1>Join us for our wedding in Peru.</h1>
           <p class="hero-copy">
-            We made this little journal-style site to help everyone feel prepared, excited, and connected before the trip. Start with the articles below for travel details, culture notes, RSVP information, and why Peru means so much to us.
+            We made this little journal-style site to help everyone feel prepared, excited, and connected before the trip. Start with the articles below for cultural notes, travel guidance, and why Peru means so much to us.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="rsvp.html">RSVP</a>
-            <a class="button" href="articles.html">Read the Articles</a>
+            <a class="button primary" href="https://forms.office.com/r/rdTySD0hh8">RSVP Now</a>
+            <a class="button" href="travel.html">Plan Your Trip</a>
           </div>
         </div>
 
         <aside class="hero-card" aria-label="Wedding highlight">
           <div class="hero-card-image" role="img" aria-label="Machu Picchu in Peru"></div>
           <p>
-            A simple place for everything guests need to know: where we are going, how to get there, what to expect, and how to celebrate with us.
+            A simple place for everything guests need to know: why Peru, how to get there, what to expect, and how to prepare for the celebration.
           </p>
         </aside>
       </section>
-
+<!-- 
       <section id="articles" aria-labelledby="articles-title">
         <div class="section-heading">
-          <h2 id="articles-title">Wedding Notes</h2>
+          <h2 id="articles-title">Featured Articles</h2>
           <p>
-            Read these like short blog posts. Each one covers one part of the trip so the details stay clear and easy to find.
+            A few stories and guides to help you get started. For the full journal, visit the articles page.
           </p>
         </div>
 
@@ -424,14 +114,14 @@
         </div>
       </section>
 
-      <section id="rsvp" class="rsvp-strip" aria-label="RSVP reminder">
+      <section class="rsvp-strip" aria-label="Helpful links">
         <div>
-          <h2>Ready to celebrate with us?</h2>
-          <p>Please RSVP when you know your plans so we can prepare for the wedding weekend.</p>
+          <h2>Ready to start planning?</h2>
+          <p>Use the travel, schedule, visa, and registry pages for the details you need before the wedding weekend.</p>
         </div>
-        <a class="button primary" href="#">Go to RSVP</a>
+        <a class="button primary" href="travel.html">View Travel Info</a>
       </section>
-    </main>
+    </main> -->
 
     <footer>
       <p>Made with love for our wedding in Peru.</p>
