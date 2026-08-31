@@ -1034,6 +1034,65 @@ footer {
   line-height: 1.6;
 }
 
+/* Ceremony Guides */
+
+.article-guide-grid,
+.attire-tips-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.15rem;
+}
+
+.article-guide-card,
+.attire-tip-card {
+  padding: 2rem;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(180, 130, 95, 0.22);
+  box-shadow: 0 14px 36px rgba(92, 58, 33, 0.07);
+}
+
+.article-guide-card h2,
+.attire-tip-card h3 {
+  margin: 0 0 1rem;
+  color: #33251d;
+}
+
+.article-guide-card h2 {
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+}
+
+.article-guide-card > p:not(.section-label),
+.attire-tip-card p {
+  color: #6f5d4f;
+  line-height: 1.75;
+}
+
+.article-guide-card > p + p {
+  margin-top: 1rem;
+}
+
+.attire-section {
+  padding-top: 3rem;
+}
+
+.attire-tip-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.attire-tip-number {
+  display: block;
+  margin-bottom: 1rem;
+  color: #a85f42;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.5rem;
+}
+
+.attire-tip-card h3 {
+  font-size: 1.25rem;
+}
+
 /* Spotify Song Cards */
 
 .song-grid {
@@ -1113,6 +1172,104 @@ footer {
   text-decoration: underline;
 }
 
+/* Blog Post */
+
+.blog-post {
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 4.5rem 1.5rem 5rem;
+}
+
+.blog-post-header {
+  display: block;
+  max-width: 740px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+}
+
+.blog-post-header h1 {
+  margin: 0 0 1.25rem;
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  line-height: 1;
+  color: #33251d;
+}
+
+.blog-post-dek {
+  color: #6f5d4f;
+  font-size: 1.12rem;
+  line-height: 1.75;
+}
+
+.blog-post-image {
+  margin: 0 0 3.5rem;
+}
+
+.blog-post-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.blog-post-image figcaption {
+  margin-top: 0.7rem;
+  color: #7b6a5c;
+  font-size: 0.88rem;
+  font-style: italic;
+}
+
+.blog-post-content {
+  max-width: 680px;
+  margin: 0 auto;
+  color: #51443a;
+  font-size: 1.08rem;
+  line-height: 1.85;
+}
+
+.blog-post-content p + p {
+  margin-top: 1.25rem;
+}
+
+.blog-post-content h2 {
+  margin: 3.25rem 0 1rem;
+  color: #33251d;
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+  line-height: 1.12;
+}
+
+.blog-post-intro {
+  color: #33251d;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.45rem;
+  line-height: 1.55;
+}
+
+.blog-post-note {
+  margin: 2.5rem 0;
+  padding: 1.25rem 0 1.25rem 1.5rem;
+  border-left: 3px solid #a85f42;
+}
+
+.blog-post-note p:last-child {
+  color: #6f5d4f;
+}
+
+.blog-post-pullquote {
+  margin: 2.75rem 0;
+  padding: 1.75rem 0;
+  border-top: 1px solid rgba(180, 130, 95, 0.3);
+  border-bottom: 1px solid rgba(180, 130, 95, 0.3);
+}
+
+.blog-post-pullquote blockquote {
+  color: #a15b3b;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+  line-height: 1.2;
+  text-align: center;
+}
+
 /* Mobile */
 
 @media (max-width: 900px) {
@@ -1126,6 +1283,15 @@ footer {
 
   .music-layout {
     grid-template-columns: 1fr;
+  }
+
+  .article-guide-grid,
+  .attire-tips-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-post {
+    padding-top: 3rem;
   }
 
   .song-grid {
